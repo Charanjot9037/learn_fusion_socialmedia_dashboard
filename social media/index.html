@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>social media dashboard</title>
+    <link rel ="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+</head>
+<body>
+
+
+<nav class ="navbar">
+    <div class="navleft">
+        <i class="fa-solid fa-bars"></i>
+        <h2 class="logo">DASHBOARD</h2>
+    </div>
+<div class="navright">
+    <div class="search">
+ 
+ 
+<i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="search" >
+    </div>
+
+    <div class="notification">
+        <i class="fa-regular fa-bell"></i>
+    </div>
+</div>
+</nav> 
+<div class="container">
+
+<div class="slidebar">
+    <div class="profile">
+
+<img src="profile.jpeg">
+<p>ADMIN</p>
+    </div>
+
+<div class="menu">
+
+<div class="menudetail menuactive">
+<a href="#"> <i class="fas fa-gifts menu-icon"></i>  <span>campagin</span></a>
+
+</div>
+
+
+<div class="menudetail">
+    <a href="#"><i class="fas fa-headset menu-icon"></i> <span>support</span></a>
+    
+    </div>
+    
+<div class="menudetail">
+    <a href="#"><i class="fas fa-user-secret menu-icon"></i> <span>security</span></a>
+    
+    </div>
+    
+<div class="menudetail">
+    <a href="#"><i class="fas fa-cog menu-icon"></i> <span>setting</span></a>
+    </div>
+</div>
+</div>
+<div class="maincontent">
+
+<div class="left">
+<div class="wrapper">
+    <div class="cardwrapper">
+        <div class="card">
+
+<i class="fab fa-instagram social-icon"></i>
+<h1 class="count">3.4M</h1>
+<small>Follower</small>
+<div class="dropdown">
+
+<button class="btn btn-more">
+    <i class="fas fa-ellipsis-v"></i>
+</button>
+<div class="dropdowncontent">
+    <a href="#">details</a>
+    <a href="#">Download</a>
+    <a href="#">shares</a>
+</div>
+</div>
+        </div>
+        <div class="card">
+
+            <i class="fab fa-youtube social-icon"></i>
+            <h1 class="count">1.4M</h1>
+            <small>Follower</small>
+            
+            <div class="dropdown">
+            <button class="btn btn-more">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="dropdowncontent">
+                <a href="#">subscriber</a>
+                <a href="#">Download</a>
+                <a href="#">shares</a>
+            </div>
+            </div>
+          </div>
+
+
+    </div>
+
+    <div class="cardwrapper">
+        <div class="card">
+
+<i class="fab fa-facebook-f social-icon"></i>
+<h1 class="count">6.4M</h1>
+<small>Follower</small>
+<div class="dropdown">
+
+<button class="btn btn-more">
+    <i class="fas fa-ellipsis-v"></i>
+</button>
+<div class="dropdowncontent">
+    <a href="#">details</a>
+    <a href="#">Download</a>
+    <a href="#">shares</a>
+</div>
+</div>
+        </div>
+        <div class="card">
+
+            <i class="fab fa-twitter social-icon"></i>
+            <h1 class="count">12.4M</h1>
+            <small>Follower</small>
+            
+            <div class="dropdown">
+            <button class="btn btn-more">
+                <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="dropdowncontent">
+                <a href="#">subscriber</a>
+                <a href="#">Download</a>
+                <a href="#">shares</a>
+            </div>
+            </div>
+          </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+<div class="wrapper">
+    <div class="card">
+        <div class="titlewrapper">
+            <h3 class="title">Trend data</h3>
+            <div class="filter">
+<a class="active" href="#">Day</a>
+<a class="active" href="#">Weeks</a>
+<a class="active" href="#">Months</a>
+
+            </div>
+        </div>
+<div class="chartcontainer">
+    <div id="chLine">
+
+    </div>
+</div>
+
+    </div>
+</div>
+</div>
+<div style="height: 600px;" class="right">
+
+<div class="card">
+    <h3 class="title">summary</h3>
+    <div id="dobnutchart"></div>
+
+
+    <div class="chartdetail">
+        <div class="detailwrapper">
+            <i class="fas fa-theater-masks"></i>
+            <p>impression</p>
+            <h3 class="detail-num">34k<span class="up-down green">+64%</span></h3>
+        </div>
+        <hr class="divider">
+        <div class="detailwrapper">
+            <i class="fas fa-user-friends"></i>
+            <p>followers</p>
+            <h3 class="detail-num">2350<span class="up-down green">+24%</span></h3>
+        </div>
+        <hr class="divider">
+        <div class="detailwrapper">
+            <i class="fas fa-shapes"></i>
+            <p>engagement</p>
+            <h3 class="detail-num">123<span class="up-down red">-12%</span></h3>
+        </div>
+        <hr class="divider">
+        <div class="detailwrapper">
+            <i class="fas fa-shapes"></i>
+            <p>likes</p>
+            <h3 class="detail-num">3400<span class="up-down green">+7%</span></h3>
+        </div>
+        <hr class="divider">
+    </div>
+</div>
+
+</div>
+
+</div>
+<!-- bottom -->
+    <div class="bottom-container">
+        <div class="card">
+            <h3 class="title">Recent Upload</h3>
+            <div class="table-wrapper">
+                <table class="table">
+                    <tr>
+                        <th>Thumbnails & Descriptions </th>
+                        <th>Dates</th>
+                        <th>View</th>
+                        <th>Comment</th>
+                        <th>Likes</th>
+                        <th>More</th>
+                    </tr>
+                    <tr>
+                        <td class="table-title">
+                            <img class="table-image" src="t-1.jpeg">
+                            <p>Summer vlog</p>
+                        </td>
+                        <td>Dec 11,2021</td>
+                        <td>280K</td>
+                        <td>151</td>
+                        <td>70K</td>
+                        <td><button style="background: transparent;border: 0;" class="btn btn-table">Details</button></td>
+                    </tr>
+                    <tr>
+                        <td class="table-title">
+                            <img class="table-image" src="t-2.jpeg">
+                            <p>Room tour</p>
+                        </td>
+                        <td>Jan 25,2022</td>
+                        <td>32K</td>
+                        <td>10</td>
+                        <td>465K</td>
+                        <td><button style="background: transparent;border: 0;" class="btn btn-table">Details</button></td>
+                    </tr>
+                    <tr>
+                        <td class="table-title">
+                            <img class="table-image" src="t-3.jpeg">
+                            <p>College diaries</p>
+                        </td>
+                        <td>Feb 06,2022</td>
+                        <td>120K</td>
+                        <td>342</td>
+                        <td>67K</td>
+                        <td><button style="background: transparent;border: 0;" class="btn btn-table">Details</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <script src="app.js"></script> 
+</body>
+</html>
